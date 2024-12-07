@@ -1,13 +1,9 @@
-"use client";
 import { DashboardHeader, Sidebar } from "@/components/shared";
 import { Separator } from "@/components/ui/separator";
-import { useInterviewSession } from "@/store/useInterviewSession";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import React, { ReactNode } from "react";
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
-  const store = useInterviewSession();
-  console.log("Interview Session", store);
   return (
     <div className="flex h-screen">
       <Sidebar />

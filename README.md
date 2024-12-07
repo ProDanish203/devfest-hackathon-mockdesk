@@ -1,4 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/iYQDFI6e)
+
 <div align="center">
   <img src="https://i.postimg.cc/d0wQJrrj/image-1.jpg" width="100%">
 </div>
@@ -8,13 +9,16 @@
 Welcome to the GDG Kolachi Devfest 2024 - Hackathon - GitHub Classroom Assignment! In this hackathon, participants will have the opportunity to leverage Google's Generative AI tools to create innovative and sustainable solutions. Below are the guidelines and instructions for submitting your project.
 
 ## Checklist for Submission:
-__Please make sure to complete this checklist before submission.__
-> You can check the box by adding x in between [], i.e. [x], when editing README.md.
-- [ ] Upload the video to YouTube or Google Drive and add the link here: <LINK>
-- [ ] Compile/run your project code and demonstrate the functionality along with input and output in the video: <VIDEO_LINK_HERE>
-- [ ] Upload presentation (pitch deck) of your project: <PRESENTATION_LINK>
 
-- [ ] I have made sure all the links added are shareable and the content is accessible.
+**Please make sure to complete this checklist before submission.**
+
+> You can check the box by adding x in between [], i.e. [x], when editing README.md.
+
+- [x] Upload the video to YouTube or Google Drive and add the link here: https://youtu.be/YGmVAnHy67s
+- [x] Compile/run your project code and demonstrate the functionality along with input and output in the video: https://youtu.be/YGmVAnHy67s
+- [x] Upload presentation (pitch deck) of your project:
+      https://www.canva.com/design/DAGYpAi8DG8/P0u0YErPoq6BqmCCUUMTrg/view?utm_content=DAGYpAi8DG8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
+- [x] I have made sure all the links added are shareable and the content is accessible.
 
 ## GDG Kolachi Devfest 2024 - Hackathon - Overview
 

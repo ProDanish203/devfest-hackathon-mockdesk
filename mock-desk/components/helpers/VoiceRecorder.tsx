@@ -5,7 +5,7 @@ import { Mic, MicOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { fileToBase64, getRandomApiKey } from "@/lib/helpers";
+import { getRandomApiKey } from "@/lib/helpers";
 
 interface VoiceRecorderProps {
   onStop: (transcript: string) => void;
@@ -98,7 +98,7 @@ const VoiceRecorder: React.FC<VoiceRecorderProps> = ({
       const options = {
         method: "POST",
         headers: {
-          "x-rapidapi-key": key,
+          "x-rapidapi-key": process.env.RAPID_API_KEY2!,
           "x-rapidapi-host": process.env.RAPID_API_HOST!,
         },
         body: formData,
