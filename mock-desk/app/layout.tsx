@@ -3,6 +3,7 @@ import { Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import ReactQueryProvider from "@/store/ReactQueryProvider";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -43,6 +44,7 @@ export default function RootLayout({
         <body
           className={`${poppins.className} ${roboto.variable} antialiased overflow-x-clip`}
         >
+          <Toaster richColors position="top-right" />
           <ReactQueryProvider>{children}</ReactQueryProvider>
         </body>
       </ClerkProvider>

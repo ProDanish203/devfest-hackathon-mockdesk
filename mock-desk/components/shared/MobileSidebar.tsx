@@ -30,7 +30,7 @@ export const MobileSidebar = () => {
             </Button>
           </SheetTrigger>
           <SheetContent
-            className="w-[400px] sm:w-[540px] space-y-4"
+            className="w-[350px] sm:w-[540px] space-y-4"
             side={"left"}
           >
             <SheetTitle>

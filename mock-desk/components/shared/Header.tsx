@@ -12,7 +12,7 @@ export const Header = () => {
   const toggleNavbar = () => {
     setOpenNavbar((openNavbar) => !openNavbar);
   };
-  const { isSignedIn, user, isLoaded } = useUser();
+  const { isSignedIn, isLoaded } = useUser();
 
   return (
     <header className="bg-transparent absolute top-0 inset-x-0 z-50 h-24 flex items-center">

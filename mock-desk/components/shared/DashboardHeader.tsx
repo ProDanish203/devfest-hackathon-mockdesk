@@ -17,7 +17,7 @@ export const DashboardHeader = () => {
       <MobileSidebar />
       <Breadcrumb>
         <BreadcrumbList>
-          {paths.map((path, idx) => (
+          {/* {paths.map((path, idx) => (
             <React.Fragment key={idx}>
               <BreadcrumbItem>
                 <BreadcrumbLink className="capitalize" href={`/${path}`}>
@@ -25,7 +25,13 @@ export const DashboardHeader = () => {
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </React.Fragment>
-          ))}
+          ))} */}
+
+          <BreadcrumbItem>
+            <BreadcrumbLink className="capitalize" href={pathname}>
+              {paths && paths.length > 0 && paths[paths.length - 1]}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
     </div>

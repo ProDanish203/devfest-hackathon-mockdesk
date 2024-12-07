@@ -8,14 +8,15 @@ datasource db {
 }
 
 model User {
-  id          String       @id @unique @default(uuid()) @db.Uuid
-  clerkId     String       @unique
-  email       String       @unique
-  name        String?
-  phone       String?
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
-  UserProfile UserProfile?
+  id               String             @id @unique @default(uuid()) @db.Uuid
+  clerkId          String             @unique
+  email            String             @unique
+  name             String?
+  phone            String?
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  UserProfile      UserProfile?
+  InterviewSession InterviewSession[]
 
   @@index([clerkId])
   @@index([email])
@@ -32,3 +33,17 @@ model UserProfile {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model InterviewSession {
+  id             String   @id @unique @default(uuid()) @db.Uuid
+  userId         String   @db.Uuid
+  user           User     @relation(fields: [userId], references: [id])
+  title          String
+  date           DateTime
+  jobDescription String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+

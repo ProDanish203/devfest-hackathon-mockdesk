@@ -1,6 +1,5 @@
 import { navLinks } from "@/lib/data";
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
-import Image from "next/image";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Logo } from "./Logo";
@@ -47,7 +46,7 @@ export const Footer = () => {
             <p className="text-white font-bold text-lg">Links</p>
             <ul className="footer-list">
               {navLinks.map((item, idx) => (
-                <Link href={item.path}>
+                <Link href={item.path} key={idx}>
                   <li className="footer-list-item">{item.title}</li>
                 </Link>
               ))}

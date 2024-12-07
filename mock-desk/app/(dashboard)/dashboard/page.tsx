@@ -2,11 +2,30 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { dummyHistory } from "@/lib/data";
 import React from "react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const DashboardPage = () => {
   return (
     <section>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg: grid-cols-4 gap-5">
+      <Alert className="flex items-center justify-between w-full gap-x-3">
+        <div>
+          <AlertTitle>Prepare Now!</AlertTitle>
+          <AlertDescription>
+            <div className="">
+              <p className="text-sm text-gray-600">
+                prepare yourself for your interviews by practicing with our mock
+                interview tool and get feedback from our AI expert.
+              </p>
+            </div>
+          </AlertDescription>
+        </div>
+        <Link href="/dashboard/conduct">
+          <Button>Conduct Interview</Button>
+        </Link>
+      </Alert>
+      <div className="mt-5 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {dummyHistory.map((item, idx) => (
           <InterviewCard key={idx} {...item} />
         ))}

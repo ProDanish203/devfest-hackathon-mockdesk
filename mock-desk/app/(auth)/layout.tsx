@@ -7,10 +7,10 @@ const AuthLayout = ({ children }: { children: ReactNode }) => {
     <main className="grid md:grid-cols-2 h-screen w-screen">
       <div className="bg-gray-200 max-md:hidden min-h-screen">
         <Image
-          src="/images/auth-image.jpg"
+          src="/assets/auth-image.jpg"
           alt="Full size image"
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
           className="w-full h-full object-cover object-center"
         />
       </div>
