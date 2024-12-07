@@ -15,7 +15,7 @@ export const Sidebar = () => {
       (route) => route.href.length > 0 && pathname.includes(route.href)
     ) || dashboardRoutes[0];
 
-  const [hideSidebar, setHideSidebar] = useState(true);
+  const [hideSidebar, setHideSidebar] = useState(false);
   return (
     <>
       {hideSidebar ? (

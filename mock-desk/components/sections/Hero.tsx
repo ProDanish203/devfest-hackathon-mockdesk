@@ -23,11 +23,12 @@ export const Hero = () => {
             Creativity in mind
           </span>
           <h1 className="section-title text-4xl md:text-5xl lg:text-6xl/tight xl:text-7xl/tight text-gray-900 font-bold max-w-4xl capitalize">
-            We inspire Growth for your business brand
+            The Edge You Need in a Competitive Job Market
           </h1>
           <p className="section-description text-base text-gray-700 dark:text-gray-300 text-center max-w-xl">
-            We help you prepare for the interview and get the job of your dreams
-            by providing you with the best platform to practice yourself.
+            MockDesk is a platform that helps you practice interviews online
+            with ease. It simplifies the interview process and provides tools to
+            prepare for job applications.
           </p>
           <div className="flex justify-center">
             <Link

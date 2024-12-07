@@ -7,7 +7,6 @@ const LandingPage = () => {
     <main>
       <Header />
       <Hero />
-      
       <Footer />
     </main>
   );

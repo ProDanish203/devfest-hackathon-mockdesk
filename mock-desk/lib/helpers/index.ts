@@ -33,3 +33,20 @@ export const extractInterviewData = (response: string) => {
 
   return jsonData;
 };
+
+export const fileToBase64 = (file: Blob): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = reject;
+  });
+};
+
+export const getRandomApiKey = (apiKeys: string[]) => {
+  if (!Array.isArray(apiKeys) || apiKeys.length === 0) {
+    throw new Error("API keys array is empty or invalid.");
+  }
+  const randomIndex = Math.floor(Math.random() * apiKeys.length);
+  return apiKeys[randomIndex];
+};

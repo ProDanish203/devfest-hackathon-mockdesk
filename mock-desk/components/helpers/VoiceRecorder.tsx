@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Mic, MicOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { fileToBase64, getRandomApiKey } from "@/lib/helpers";
 
 interface VoiceRecorderProps {
   onStop: (transcript: string) => void;
@@ -20,6 +22,14 @@ const VoiceRecorder: React.FC<VoiceRecorderProps> = ({
     null
   );
   const [audioChunks, setAudioChunks] = useState<Blob[]>([]);
+
+  const API_KEY = process.env.GEMINI_API_KEY;
+  const genAI = new GoogleGenerativeAI(API_KEY!);
+  const model = genAI.getGenerativeModel({
+    model: "gemini-1.5-flash",
+    systemInstruction:
+      "You are an speech to text AI that provides the transcript of the provided audio in text format.",
+  });
 
   const handleStartRecording = async () => {
     try {
@@ -73,10 +83,22 @@ const VoiceRecorder: React.FC<VoiceRecorderProps> = ({
       const formData = new FormData();
       formData.append("file", audioFile);
 
+      const apikeys = [
+        process.env.RAPID_API_KEY1!,
+        process.env.RAPID_API_KEY_2!,
+        process.env.RAPID_API_KEY_3!,
+        process.env.RAPID_API_KEY_4!,
+        process.env.RAPID_API_KEY_5!,
+        process.env.RAPID_API_KEY_6!,
+        process.env.RAPID_API_KEY_7!,
+      ];
+
+      const key = getRandomApiKey(apikeys);
+
       const options = {
         method: "POST",
         headers: {
-          "x-rapidapi-key": process.env.RAPID_API_KEY!,
+          "x-rapidapi-key": key,
           "x-rapidapi-host": process.env.RAPID_API_HOST!,
         },
         body: formData,
